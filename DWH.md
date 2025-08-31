@@ -1,8 +1,3 @@
-Sehr gut 👍 – du baust dir gerade eine richtig saubere **Knowledge Base rund ums Data Warehouse** auf.
-Ich schlage vor, wir erweitern deine bisherige Linkliste um eine **eigene Sektion „DWH Design & Modeling“** mit Literatur, Konzepten und Themenübersicht. Damit hast du alle Kernaspekte (Basics, Design, OLAP, Power BI, Community, Install) schön geordnet.
-
----
-
 # 📚 Data Warehouse – Knowledge Base (Round-up)
 
 ## 🔹 Data Warehouse – Basics & Concepts
@@ -83,7 +78,7 @@ Ich schlage vor, wir erweitern deine bisherige Linkliste um eine **eigene Sektio
 
 ---
 
-👉 Damit hast du jetzt eine **komplette Rundumsicht über DWH**:
+**Komplette Rundumsicht über DWH**:
 
 1. Grundkonzepte
 2. Design/Modellierung (Kimball, Corr/Stagnitto, SCD, Keys, KPIs)
