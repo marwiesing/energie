@@ -6,6 +6,7 @@
 * [Databricks – What is a Data Warehouse?](https://www.databricks.com/de/glossary/data-warehouse)
 * [SAP – What is a Data Warehouse?](https://www.sap.com/austria/products/data-cloud/datasphere/what-is-a-data-warehouse.html)
 * [Technikum Wien – Was ist ein Data Warehouse?](https://academy.technikum-wien.at/ratgeber/was-ist-ein-data-warehouse/)
+* [DataEngineering Wiki – Learning Resources](https://dataengineering.wiki/Learning+Resources)
 
 ---
 
@@ -40,6 +41,7 @@
 **📊 KPI-Design**
 
 * Key Performance Indicators → Ableitung aus Facts & Business-Fragestellungen
+* [Tableau – Was sind KPIs?](https://www.tableau.com/de-de/learn/articles/what-is-kpi#:~:text=Was%20sind%20KPIs%3F,Einheiten%20oder%20einer%20Maschine%20beziehen..)
 
 ---
 
@@ -60,7 +62,7 @@
 * [Microsoft Learn – Row-Level Security in Fabric/Power BI](https://learn.microsoft.com/en-us/fabric/security/service-admin-row-level-security)
 * [Microsoft Learn – Visual Calculations in Power BI](https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-visual-calculations-overview)
 * [Microsoft Learn – DAX INFO.VIEWMEASURES Function](https://learn.microsoft.com/en-us/dax/info-view-measures-function-dax)
-* [DAX Guide – MAX Function](https://dax.guide/max/)
+* [DAX Guide](https://dax.guide)
 
 ---
 
