@@ -1,5 +1,3 @@
----
-
 # 📐 Data Warehouse Design & Modeling
 
 Dieses Dokument fasst die wichtigsten Konzepte, Methoden und Best Practices für das **Design von Data Warehouses** zusammen. Grundlage sind die Werke von **Kimball** (Dimensional Modeling) und **Inmon**, ergänzt um moderne Ansätze aus der Praxis.
@@ -140,3 +138,81 @@ Um die **richtigen Kennzahlen** zu definieren, helfen die **7W-Fragen**:
 
 ---
 
+## 🔹 Erweiterte Konzepte (Advanced Modeling Concepts)
+
+### **Faktenarten (Types of Facts)**
+
+* **Additive Facts** – summierbar über alle Dimensionen (z. B. Umsatz).
+* **Semi-Additive Facts** – nur teilweise summierbar (z. B. Kontostand summierbar über Kunden, aber nicht über Zeit).
+* **Non-Additive Facts** – nicht summierbar, nur berechenbar (z. B. Prozentsätze, Quoten).
+
+---
+
+### **Faktentabellen-Varianten**
+
+* **Transaction Fact Table** – detailgenaue Transaktionen (jede Bestellung, jeder Anruf).
+* **Snapshot Fact Table** – Momentaufnahmen (z. B. Monatsendbestand).
+* **Accumulating Snapshot** – Prozessfortschritt (z. B. Bestellung → Versand → Zahlung).
+
+---
+
+### **Zeitdimension (Time Dimension)**
+
+* Eine **explizite Kalendertabelle** ist Best Practice.
+* Enthält Attribute wie: Jahr, Quartal, Monat, Woche, Feiertage, Geschäftsjahr, Arbeitstage.
+* Erleichtert Zeitreihenanalysen und Zeitvergleiche (YoY, MoM).
+
+---
+
+### **Conformed Dimensions**
+
+* Wiederverwendete Dimensionen in mehreren Star Schemas (z. B. `Date`, `Customer`, `Product`).
+* Vorteil: **Konsistenz** in Analysen über mehrere Fachbereiche hinweg.
+
+---
+
+### **Junk Dimensions**
+
+* Bündelung kleiner Attribute (z. B. Flags wie „PromoFlag“, „OnlineOrderFlag“).
+* Ziel: **Fact Tables schlank halten**.
+
+---
+
+### **Degenerate Dimensions (DD)**
+
+* Dimension ohne eigene Tabelle.
+* Attribut (z. B. `OrderNumber`) wird direkt in die Fact Table integriert.
+
+---
+
+### **Bridge Tables (Many-to-Many Relationships)**
+
+* Behandlung von M\:N-Beziehungen zwischen Dimensionen (z. B. Kunde ↔ Konto, Student ↔ Kurs).
+* Lösen Probleme bei Aggregationen und Mehrfachzuordnungen.
+
+---
+
+### **Data Vault vs. Dimensional Modeling**
+
+* **Data Vault**: Integrationsorientiert, stark normalisiert (Hub, Link, Satellite).
+* **Dimensional Modeling (Kimball)**: Analyseorientiert, denormalisiert (Star Schema).
+* Moderne Architekturen kombinieren beides: Data Vault als **Raw Vault**, Star Schema für **Data Marts**.
+
+---
+
+### **ETL/ELT-Designprinzipien**
+
+* Trennung in **Staging → Core DWH → Data Marts**.
+* Automatisierte **Datenqualitäts-Checks**.
+* Metadaten-gesteuerte ETL-Prozesse für Skalierbarkeit.
+
+---
+
+### **Performance & Best Practices**
+
+* Grain klar definieren, Mischgranularitäten vermeiden.
+* Surrogate Keys mit Indexierung nutzen.
+* Partitionierung großer Fact Tables.
+* Automatisiertes SCD-Handling.
+
+---
